@@ -6,6 +6,29 @@ let other = document.querySelector(".other");
 
 button.addEventListener("click", function() {
     let state = document.querySelector(".state").value;
+    if (state === "California"){
+        californiaMessage.style.display = "block";
+        illinoisMessage.style.display = "none";
+        newyorkMessage.style.display = "none";
+        other.style.display = "none";
+    } else if (state === "Illinois"){
+        illinoisMessage.style.display = "block";
+        californiaMessage.style.display = "none";
+        newyorkMessage.style.display = "none";
+        other.style.display = "none";
+    } else if (state === "New York"){
+        newyorkMessage.style.display = "block";
+        californiaMessage.style.display = "none";
+        illinoisMessage.style.display = "none";
+        other.style.display = "none";
+    } else{
+        other.style.display = "block";
+        californiaMessage.style.display = "none";
+        illinoisMessage.style.display = "none";
+        newyorkMessage.style.display = "none";
+    };
+});
+
 
     // CODE ALONG
     // 1. Write an if statement that would display the california message if a user says they're from "California".
@@ -16,9 +39,6 @@ button.addEventListener("click", function() {
     // 3. Write an else if statement that would display the new york message if a user says they're from "New York".
     
     // 4. Write an else statement that displays the other message if the user types in a different state.
-
-
-});
 
 // Finished early? 
 //  - Add another state of your choosing!
